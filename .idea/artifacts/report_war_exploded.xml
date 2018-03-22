@@ -48,6 +48,10 @@
           <element id="library" level="project" name="Maven: com.github.virtuald:curvesapi:1.04" />
           <element id="library" level="project" name="Maven: org.apache.xmlbeans:xmlbeans:2.3.0" />
           <element id="library" level="project" name="Maven: stax:stax-api:1.0.1" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-core:1.2.3" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.4" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-web:1.2.3" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-spring:1.2.3" />
         </element>
       </element>
       <element id="directory" name="META-INF">
