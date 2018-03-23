@@ -23,7 +23,7 @@ public class LoginDao {
      * @return
      */
     public List<Map<String, Object>> queryUser(String username){
-        String sql = "select * from 用户表 where 用户名 = ?";
+        String sql = "select * from WD_USER where NAME = ?";
         return jdbcTemplate.queryForList(sql, username);
     }
 }
