@@ -13,7 +13,7 @@ function editEL(el){
 }*/
 //跳转登录
 function login(){
-    window.location.href = "/login/toLogin";
+    window.location.href = "login/toLogin";
 }
 
 /* js加载日期 */
