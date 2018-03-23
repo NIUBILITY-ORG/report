@@ -1,5 +1,6 @@
 package cn.lz.common;
 
+import cn.lz.utils.ResourceUtil;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -9,8 +10,6 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by lz on 2018/3/22.
@@ -18,10 +17,16 @@ import java.util.List;
 @Component
 public class UserAuthorizingRealm extends AuthorizingRealm{
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
-        Long next = (Long)principalCollection.fromRealm(getName()).iterator().next();
-        List list = new ArrayList<String>();
+        ResourceUtil.getAdminName();
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
-        info.addStringPermissions(list);
+        Object principal =  principalCollection.getPrimaryPrincipal();
+        if("admin".equals(principal)){
+            info.addRole("admin");
+        }
+        if("user".equals(principal)){
+            info.addRole("list");
+        }
+        info.addRole("user");
         return null;
     }
 
