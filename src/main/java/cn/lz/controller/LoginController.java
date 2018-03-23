@@ -2,12 +2,7 @@ package cn.lz.controller;
 
 import cn.lz.bean.LoginForm;
 import cn.lz.service.LoginService;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.AuthenticationException;
-import org.apache.shiro.authc.LockedAccountException;
-import org.apache.shiro.authc.UnknownAccountException;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.subject.Subject;
+import cn.lz.utils.ResourceUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -42,28 +37,40 @@ public class LoginController {
     @RequestMapping(value = "/in", method = RequestMethod.POST)
     public String login(Model model, @ModelAttribute LoginForm loginForm, HttpServletRequest request){
 
-        //UsernamePasswordToken token = new UsernamePasswordToken(loginForm.getUsername(), loginForm.getPassword());
-
-        //Subject subject = SecurityUtils.getSubject();
-
-        /*try {
-            subject.login(token);
-            //查询用户
+        //判断是否是管理员登录
+        if(loginForm.getUsername().equals(ResourceUtil.getAdminName())){
+            if (loginForm.getPassword().equals(ResourceUtil.getAdminPassword())){
+                LoginForm user = new LoginForm();
+                user.setUsername(loginForm.getUsername());
+                user.setRole("admin");
+                request.getSession().setAttribute("activeUser",user);
+                model.addAttribute("msg","登录成功！");
+                return "/login/home";
+            } else {
+                model.addAttribute("msg","密码错误！");
+                return "redirect:/login/toLogin";
+            }
+        } else {
             List<Map<String, Object>> maps = loginService.queryUser(loginForm.getUsername());
+            if(maps.size() > 0){
+                Map<String, Object> a = maps.get(0);
+                if(a.get("password").equals(loginForm.getPassword())){
+                    LoginForm user = new LoginForm();
+                    user.setUsername(loginForm.getUsername());
+                    user.setRole("user");
+                    request.getSession().setAttribute("activeUser",user);
+                    model.addAttribute("msg","登录成功！");
+                    return "/login/home";
+                } else {
+                    model.addAttribute("msg","密码错误！");
+                    return "redirect:/login/toLogin";
+                }
+            } else {
+                model.addAttribute("msg","用户不存在！");
+                return "redirect:/login/toLogin";
+            }
+        }
 
-
-            request.getSession().setAttribute("activeUser", loginForm);
-        } catch (UnknownAccountException e){
-
-            model.addAttribute("error", "用户名不存在，请注册用户！");
-            return toLogin(model);
-        } catch (AuthenticationException e) {
-
-            model.addAttribute("error", "用户名或密码错误，请重新登录！");
-            return toLogin(model);
-        }*/
-
-        return "redirect:/home";
     }
 
 }
