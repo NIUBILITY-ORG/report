@@ -16,4 +16,10 @@ public class HomeController {
         System.out.println(123);
         return "/login/homePage";
     }
+
+    @RequestMapping("/in")
+    public String login(){
+
+        return "/login/home";
+    }
 }

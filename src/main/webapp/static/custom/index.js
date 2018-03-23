@@ -16,6 +16,10 @@ function login(){
     window.location.href = "login/toLogin";
 }
 
+function loginIn(){
+    window.location.href = "home/in";
+}
+
 /* js加载日期 */
 function loadtm(){
 	var days=new  Array ("日", "一", "二", "三", "四", "五", "六");  

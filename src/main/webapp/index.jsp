@@ -22,7 +22,14 @@
     <div class="wid_1820">
 
         <div class="header">
-            <p><span>用户名<a onclick="login();" href="####">[登录]</a></span></p>
+            <p><span>
+                <c:if test="${sessionScope.activeUser == '' || sessionScope.activeUser == null}">
+                    <a onclick="login();" href="####">[登录]</a>
+                </c:if>
+                <c:if test="${sessionScope.activeUser != '' && sessionScope.activeUser != null }">
+                    <a onclick="loginIn();" href="####">[进入后台]</a>
+                </c:if>
+            </span></p>
         </div>
         <!--
         <h3 class="title">实时监测-企业名单</h3>
