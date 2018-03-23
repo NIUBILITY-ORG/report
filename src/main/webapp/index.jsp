@@ -22,8 +22,6 @@
     <div class="wid_1820">
 
         <div class="header">
-            <p class="tmtext"><span>日期</span></p>
-            <p><span class="hefont"></span></p>
             <p><span>用户名<a onclick="login();" href="####">[登录]</a></span></p>
         </div>
         <!--
@@ -32,7 +30,7 @@
         <div class="content">
             <img class="guang" src="${root}/static/img/title.png"/>
             <div class="tb tb_left">
-                <h3 ondblclick="editEL(this);">AAA</h3>
+                <h3 ondblclick="editEL(this);">今日分时进展馆客流</h3>
                 <table class="table1">
                     <tr class="tb_title"><td>企业名称</td><td>盈利对利息覆盖能力</td><td>流动性还本付能力</td><td>清偿性还本付息能力</td></tr>
                     <tr><td>鲁泰纺织股份有限公司</td><td>5.61</td><td>5.76</td><td>1.87<td></tr>
@@ -42,34 +40,53 @@
             </div>
             <div class="tb tb_middle">
                 <div class="tb_middle_inLeft">
-                    <h2 ondblclick="editEL(this);">今日意向客流</h2>
+                    <h2>今日意向客流</h2>
                     <p>123456</p>
                 </div>
-                <div class="tb_middle_inRight">
-                    <h2 ondblclick="editEL(this);">今日进场客流</h2>
-                    <p>123456</p>
+                <div class="tb_middle_inRight ">
+                    <h2>当前日期</h2>
+                    <span class="theDateStr">日期</span>
                 </div>
                 <div class="tb_middle_inLeft">
-                    <h2 ondblclick="editEL(this);">累计意向客流</h2>
+                    <h2>累计意向客流</h2>
+                    <p>123456</p>
+                </div>
+                <div class="tb_middle_inRight ">
+                    <h2>当前时间</h2>
+                    <span class="theTimeStr">时间</span>
+                </div>
+                <div class="tb_middle_inLeft">
+                    <h2>今日进场客流</h2>
                     <p>123456</p>
                 </div>
                 <div class="tb_middle_inRight">
-                    <h2 ondblclick="editEL(this);">累计进场客流</h2>
+                    <h2>累计进场客流</h2>
                     <p>123456</p>
                 </div>
             </div>
             <div class="tb tb_right">
-                <h3 ondblclick="editEL(this);">AA+</h3>
+                <h3 ondblclick="editEL(this);">每日进展馆客流</h3>
+                <table class="table1">
+                    <tr class="tb_title"><td>企业名称</td><td>盈利对利息覆盖能力</td><td>流动性还本付能力</td><td>清偿性还本付息能力</td></tr>
+                    <tr><td>比音勒芬服饰股份有限公司</td><td>5.37</td><td>5.54</td><td>6.29<td></tr>
+                    <tr><td>罗莱生活科技股份有限公司</td><td>5.13</td><td>5.47</td><td>1.94<td></tr>
+                    <tr><td>日播时尚集团股份有限公司</td><td>5.41</td><td>5.46</td><td>1.51<td></tr>
+                    <tr><td>深圳汇洁集团股份有限公司</td><td>5.33</td><td>5.49</td><td>3.19<td></tr>
+                    <tr><td>维格娜丝时装股份有限公司</td><td>5.27</td><td>5.49</td><td>5.01<td></tr>
+                    <tr><td>山东齐悦科技有限公司</td><td>5.42</td><td>5.43</td><td>3.59<td></tr>
+                    <tr><td>仙宜岱股份有限公司</td><td>5.29</td><td>5.17</td><td>1.99<td></tr>
+                </table>
+            </div>
+            <div style="clear:both"></div>
+            <div class="tb tb_left">
+                <h3 ondblclick="editEL(this);">每日分时进展区客流</h3>
                 <table class="table1">
                     <tr class="tb_title"><td>企业名称</td><td>盈利对利息覆盖能力</td><td>流动性还本付能力</td><td>清偿性还本付息能力</td></tr>
                     <tr><td>安正时尚集团股份有限公司</td><td>5.58</td><td>5.63</td><td>1.56</td></tr>
                     <tr><td>广东柏堡龙股份有限公司</td><td>5.46</td><td>5.56</td><td>5.32</td></tr>
                     <tr><td>深圳富安娜家居用品股份有限公司</td><td>5.48</td><td>5.60</td><td>2.19<td></tr>
                 </table>
-            </div>
-            <div style="clear:both"></div>
-            <div class="tb tb_left">
-                <h3 ondblclick="editEL(this);">AA2</h3>
+                <h3 ondblclick="editEL(this);">每日分时段意向客流</h3>
                 <table class="table1">
                     <tr class="tb_title"><td>企业名称</td><td>盈利对利息覆盖能力</td><td>流动性还本付能力</td><td>清偿性还本付息能力</td></tr>
                     <tr><td>比音勒芬服饰股份有限公司</td><td>5.37</td><td>5.54</td><td>6.29<td></tr>
@@ -82,7 +99,7 @@
                 </table>
             </div>
             <div class="tb tb_middle">
-                <h3 ondblclick="editEL(this);">AA1</h3>
+                <h3 ondblclick="editEL(this);">每日进展馆客流</h3>
                 <table class="table1">
                     <tr class="tb_title"><td>企业名称</td><td>盈利对利息覆盖能力</td><td>流动性还本付能力</td><td>清偿性还本付息能力</td></tr>
                     <tr><td>比音勒芬服饰股份有限公司</td><td>5.37</td><td>5.54</td><td>6.29<td></tr>
@@ -95,7 +112,20 @@
                 </table>
             </div>
             <div class="tb tb_right">
-                <h3 ondblclick="editEL(this);">AA-及以下</h3>
+                <h3 ondblclick="editEL(this);">每日进展区客流</h3>
+                <table class="table1">
+                    <tr class="tb_title"><td>企业名称</td><td>盈利对利息覆盖能力</td><td>流动性还本付能力</td><td>清偿性还本付息能力</td></tr>
+                    <tr><td>深圳歌力思服饰股份有限公司</td><td>5.43</td><td>5.25</td><td>1.69<td></tr>
+                    <tr><td>山东齐悦科技有限公司</td><td>5.42</td><td>5.43</td><td>3.59<td></tr>
+                    <tr><td>探路者控股集团股份有限公司</td><td>5.38</td><td>5.21</td><td>3.16<td></tr>
+                    <tr><td>仙宜岱股份有限公司</td><td>5.29</td><td>5.17</td><td>1.99<td></tr>
+                    <tr><td>浙江棒杰数码针织品股份有限公司</td><td>5.21</td><td>5.00</td><td>2.77<td></tr>
+                    <tr><td>浙江红蜻蜓鞋业股份有限公司</td><td>5.29</td><td>5.16</td><td>2.14<td></tr>
+                    <tr><td>仙宜岱股份有限公司</td><td>5.29</td><td>5.17</td><td>1.99<td></tr>
+                </table>
+            </div>
+            <div class="tb tb_right">
+                <h3 ondblclick="editEL(this);">每日进展区参观时间</h3>
                 <table class="table1">
                     <tr class="tb_title"><td>企业名称</td><td>盈利对利息覆盖能力</td><td>流动性还本付能力</td><td>清偿性还本付息能力</td></tr>
                     <tr><td>深圳歌力思服饰股份有限公司</td><td>5.43</td><td>5.25</td><td>1.69<td></tr>
