@@ -13,13 +13,17 @@ public class HomeController {
 
     @RequestMapping("")
     public String toHome(){
-        System.out.println(123);
         return "/login/homePage";
     }
 
     @RequestMapping("/in")
     public String login(){
-
         return "/login/home";
+    }
+
+    @RequestMapping("/index")
+    public String index(){
+
+        return "/login/index";
     }
 }

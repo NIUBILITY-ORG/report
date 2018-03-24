@@ -41,11 +41,7 @@
                 <input type="password" name="password" class="form-control" placeholder="密码" required="">
             </div>
             <button type="submit" class="btn btn-primary block full-width m-b">登 录</button>
-
-
-            <p class="text-muted text-center"> <a href="login.html#"><small>忘记密码了？</small></a> | <a href="register.html">注册一个新账号</a>
-            </p>
-
+            <p class="text-muted text-center"><small>忘记密码请联系超级管理员找回！！！</small></p>
         </form>
     </div>
 </div>

@@ -60,21 +60,44 @@
                 <li>
                     <a href="#">
                         <i class="fa fa-home"></i>
-                        <span class="nav-label">主页</span>
+                        <span class="nav-label">账户管理/系统配置</span>
                         <span class="fa arrow"></span>
                     </a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a class="J_menuItem" href="">第一页</a>
+                            <a class="J_menuItem" href="/login/toUserList">用户列表</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="">第二页</a>
+                            <a class="J_menuItem" href="/login/toAddUser">用户添加</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="">显示屏配置管理</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="">报表数据配置</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="">热力图设备配置</a>
                         </li>
                     </ul>
-
                 </li>
                 <li>
-                    <a class="J_menuItem" href=""><i class="fa fa-columns"></i> <span class="nav-label">布局</span></a>
+                    <a href="#">
+                        <i class="fa fa-columns"></i>
+                        <span class="nav-label">报表查看</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a class="J_menuItem" href="">每日进场客流分析</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="">日分时进场客流分析</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="">每日展区热力图分析</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
