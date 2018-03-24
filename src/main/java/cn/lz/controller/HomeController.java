@@ -20,10 +20,4 @@ public class HomeController {
     public String login(){
         return "/login/home";
     }
-
-    @RequestMapping("/index")
-    public String index(){
-
-        return "/login/index";
-    }
 }
